@@ -384,7 +384,7 @@ class Modal {
         this._backdrop.classList.add(animate)
       }
 
-      $(this._backdrop).appendTo(document.body)
+      $(this._backdrop).appendTo(document.querySelector('.fbmpro-root') || document.body)
 
       $(this._element).on(EVENT_CLICK_DISMISS, event => {
         if (this._ignoreBackdropClick) {
